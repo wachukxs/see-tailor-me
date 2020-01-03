@@ -1,0 +1,138 @@
+.form {
+  display: inline-block;
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 74px rgba(0,0,0, 0.25);
+  border-radius: 8px;
+}
+
+.form__info {
+  font-size: 12px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -30px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .25s cubic-bezier(0.785, 0.135, 0.15, 0.86), transform .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.form__info_hide {
+  visibility: hidden;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: opacity .25s cubic-bezier(0.785, 0.135, 0.15, 0.86), transform .25s cubic-bezier(0.785, 0.135, 0.15, 0.86), visibility .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.form__info_success {
+  color: #000;
+}
+
+.form__info_error {
+  color: #f84b29;
+}
+
+.form::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: -25%;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url('../../images/dots.svg');
+}
+
+.form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.form__input {
+  position: relative;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #888 !important;
+  font-size: 16px;
+  transition: background-color 50000000s ease-in-out 0s;
+}
+
+.form__input {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  height: 60px;
+  padding: 19px 28px;
+  color: #888;
+  width: 282px;
+  font-size: 16px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  text-overflow: ellipsis;
+}
+
+.form__submit {
+  width: 78px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  margin-left: auto;
+  position: relative;
+}
+
+.form__submit .form__submit_text {
+  outline: none;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyMiAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTQuODE0NSAwLjIyNTU4OUMxNC41MTQ4IC0wLjA3NTE5NjUgMTQuMDE2IC0wLjA3NTE5NjUgMTMuNzA1OCAwLjIyNTU4OUMxMy40MDYxIDAuNTE2MjE0IDEzLjQwNjEgMC45OTk5MSAxMy43MDU4IDEuMjg5ODZMMTkuMzI3NyA2Ljc0MTI2SDAuNzc2MTgzQzAuMzQzNzI4IDYuNzQxOTQgMCA3LjA3NTI0IDAgNy40OTQ1OEMwIDcuOTEzOTIgMC4zNDM3MjggOC4yNTgwNiAwLjc3NjE4MyA4LjI1ODA2SDE5LjMyNzdMMTMuNzA1OCAxMy42OTkzQzEzLjQwNjEgMTQuMDAwMSAxMy40MDYxIDE0LjQ4NDUgMTMuNzA1OCAxNC43NzQ0QzE0LjAxNiAxNS4wNzUyIDE0LjUxNTUgMTUuMDc1MiAxNC44MTQ1IDE0Ljc3NDRMMjEuNzY3NCA4LjAzMjQ3QzIyLjA3NzUgNy43NDE4NSAyMi4wNzc1IDcuMjU4MTUgMjEuNzY3NCA2Ljk2ODIxTDE0LjgxNDUgMC4yMjU1ODlaIiBmaWxsPSIjMDA4NUZGIi8+PC9zdmc+);
+  transition: opacity .2s ease;
+}
+
+.form__submit:focus {
+  outline: none;
+}
+
+.form__submit .form__submit_text:hover {
+  opacity: .5;
+}
+
+@media screen and (max-width: 767px) {
+  .form::before {
+    top: 200%;
+  }
+
+  .form__input {
+    width: 100%;
+  }
+
+  .form__input {
+    width: 100%;
+    line-height: 30px;
+    font-size: 16px;
+  }
+
+  .form__input::before {
+    width: 24px;
+    height: 24px;
+    left: -32px;
+  }
+
+  .form__submit {
+    width: 108px;
+    line-height: 30px;
+  }
+}

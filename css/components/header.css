@@ -1,0 +1,36 @@
+header.header {
+  position: relative;
+  min-width: 100%;
+  padding-top: 50px;
+}
+
+header.header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: 190px;
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url('../../images/dots.svg');
+}
+
+.header__inner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  header.header {
+    margin-bottom: 30px;
+  }
+  header.header::before {
+    left: 50%;
+    top: -35%;
+    transform: translateX(-50%);
+  }
+}
